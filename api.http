@@ -1,0 +1,29 @@
+###Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+###Recuperar una pelicula por id
+GET http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc 
+
+
+###
+GET http://localhost:1234/movies?genre=acTION
+
+###Crear una nueva pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Avengers",
+  "year": 2012,
+  "director": "Joss Whedon",
+  "duration": 143,
+  "poster": "https://img.fruugo.com/product/7/41/14532417_max.jpg",
+  "genre": ["Action", "Adventure", "Sci-Fi"]
+}
+###Modificar una pelicula
+PATCH http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "year": 1900
+}
